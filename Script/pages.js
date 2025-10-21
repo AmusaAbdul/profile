@@ -9,7 +9,6 @@ form.addEventListener('submit', (e) => {
   if (fullName && email && subject && message.length >= 10) {
     successMessage.style.display = 'block';
   } else {
-    // Display error messages
     if (!fullName) {
       document.getElementById('test-contact-error-name').textContent = 'Full name is required';
     }
