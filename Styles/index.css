@@ -8,12 +8,12 @@ article {
   flex-direction: column;
 }
  div{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    margin: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  margin: 0;
 }
 img {
   width: 100px;
@@ -23,25 +23,44 @@ img {
 button {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  padding: 8px 12px;
+  gap: 6px;
+  padding: 8px 14px;
   border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
-  color: white;
-  background-color: black;
   border: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  position: relative; 
+  z-index: 10;
 }
+
+button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+button svg {
+  width: 20px;
+  height: 20px;
+}
+
 ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+[data-testid="test-user-pages"] {
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   article {
     flex-direction: row;
-    text-align: center;
+    text-align: left ;
+    gap: 1%;
   }
 }
